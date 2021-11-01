@@ -64,11 +64,21 @@ public class CustomList extends ArrayAdapter<City> {
      */
     public void addCity(City city){
         cities.add(city);
-        return;
     }
 
-    public static boolean hasCity(City city){
-        return;
+    /**
+     * This function will check if there exist a specific city object
+     * @param city
+     * @return
+     *      If the city object exists, return true, otherwise return false
+     */
+    public boolean hasCity(City city){
+        for (int i = 0; i < cities.size();i++){
+            if (cities.get(i).getCityName().equals(city.getCityName()) && cities.get(i).getProvinceName().equals(city.getProvinceName())){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
