@@ -26,6 +26,7 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
 
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -65,4 +66,9 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
         return;
     }
+
+    public static boolean hasCity(City city){
+        return;
+    }
+
 }
