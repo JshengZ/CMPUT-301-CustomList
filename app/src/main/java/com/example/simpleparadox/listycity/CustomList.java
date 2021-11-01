@@ -81,8 +81,14 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
-
+    /**
+     * This function will delete an existing city object
+     * @param city
+     */
     public void deleteCity(City city){
-        return;
+        if (!hasCity(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
     }
 }
